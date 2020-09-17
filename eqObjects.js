@@ -28,40 +28,33 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 
 
 
-const lengthCheck = function(obj1, obj2){
-  console.log(obj1, obj2)
-  let firstKeys = Object.keys(obj1);
-  let secondKeys = Object.keys(obj2);
-  console.log(firstKeys.length,secondKeys.length)  
-  if(firstKeys.length === secondKeys.length){
-    return true;
-  }
-  return false;
-}
+
 
 
 
 
 const eqObjects = function(object1, object2){
-  if(lengthCheck(object1, object2)){
-    for(let key in object1){
-      if(object1[key] !== object2[key]){
-        if(Array.isArray(object1[key]) && Array.isArray(object2[key])){
-         console.log(object1[key],object2[key]);
-          return eqArrays(object1[key], object2[key]);
-
-        }
-        
-      }
-    }
-    return true;
-    
-  } else {
+  if(Object.keys(object1).length !== Object.keys(object2).length){
+    console.log(Object.keys(object1).length, Object.keys(object2).length)
     return false;
-  } 
+  } else {
+      for(let key in object1){
+        if(Array.isArray(object1[key]) && Array.isArray(object2[key])){
+          console.log(object1[key],object2[key]);
+          return eqArrays(object1[key], object2[key]);
+        } else if(object1[key] !== object2[key]){
+          console.log(object1[key],object2[key])
+          return false;
+        }
+          
+      }
+      return true;
+  }
   
-}
+}  
+ 
 
 
-// console.log(eqObjects(cd, abc))
-console.log(assertEqual(eqObjects(cd,dc),true))
+
+console.log(eqObjects(cd, dc))
+// console.log(assertEqual(eqObjects(cd,dc),true))
