@@ -1,6 +1,6 @@
 const assertEqual = require('../assertEqual');
 
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, "1");
+assertEqual("Bootcamp", "Bootcamp"); //should be false
+assertEqual(1, "1"); //should be false
 
-assertEqual("Bootcamp", "Bootcamp")
+assertEqual("Bootcamp", "ABCD");//should be false
