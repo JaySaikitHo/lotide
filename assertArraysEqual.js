@@ -1,17 +1,16 @@
+const { assert } = require("chai");
+const eqArrays = require("./eqArrays")
 
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual,expected) === true) {
+    console.log(`👍Assertion Passed: ${actual} === ${expected}`);
   } else {
-    for (i = 0; i < arr2.length; i++) {
-      if (arr1[i] === arr2[i]) {
-      } else {
-        return false;
-      }
-    } return true;
+    console.log(`💥Assertion Failed: ${actual} !=== ${expected}`);
   }
 };
 
 
 
-module.exports = eqArrays;
+
+
+module.exports = assertArraysEqual;

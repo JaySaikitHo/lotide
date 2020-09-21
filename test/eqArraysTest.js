@@ -1,4 +1,6 @@
 const assertEquals = require("../assertEqual");
-const eqArrays = require("../eqArrays");
+const assertArraysEqual = require("../assertArraysEqual");
+const { assert } = require("chai");
 
-assertEquals(eqArrays([1,2,3],[1,2,3]),true)
+assertArraysEqual([1,5,3],[1,2,3])
+assertArraysEqual(["A","B","C"],["A","B","C"])
