@@ -14,5 +14,4 @@ const getMid = function(arr){
 }
 
 
-
 module.exports = getMid;
