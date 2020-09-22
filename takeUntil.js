@@ -1,30 +1,12 @@
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected) === true) {
-    console.log(`👍Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`💥Assertion Failed: ${actual} !=== ${expected}`);
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (i = 0; i < arr2.length; i++) {
-      if (arr1[i] === arr2[i]) {
-      } else {
-        return false;
-      }
-    } return true;
-  }
-};
+const eqArrays = require('./eqArrays');
 
 
 
 // const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+// const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 
 
 const takeUntil = function(arr, callback) {
@@ -39,7 +21,7 @@ const takeUntil = function(arr, callback) {
 };
 
 
-
+module.exports = takeUntil;
 
 
 

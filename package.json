@@ -1,7 +1,7 @@
 {
-  "name": "y",
+  "name": @Shinsensakana/lotide,
   "version": "1.0.0",
-  "description": "",
+  "description": "practice library from Lighthouse Bootcamp",
   "main": "n",
   "directories": {
     "test": "test"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Shinsensakana/lotide.git"
   },
-  "author": "",
+  "author": "Jay Ho",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Shinsensakana/lotide/issues"

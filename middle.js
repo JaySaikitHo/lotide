@@ -1,6 +1,6 @@
 
 
-const getMid = function(arr){
+const middle = function(arr){
   let middleArray = [];
   if(arr.length <= 2){
     return arr
@@ -14,4 +14,4 @@ const getMid = function(arr){
 }
 
 
-module.exports = getMid;
+module.exports = middle;
